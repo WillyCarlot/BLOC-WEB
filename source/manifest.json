@@ -1,0 +1,35 @@
+{
+  "name": "Hook-up",
+  "short_name": "HK-UP",
+  "start_url": "https://hookup.pingard.me",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "./assets/img/logo.png",
+      "type": "image/png",
+      "sizes": "308x375"
+    },
+    {
+      "src": "./assets/img/logo_square.png",
+      "type": "image/png",
+      "sizes": "235x235"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "./assets/img/home_img.png",
+      "type": "image/png",
+      "sizes": "2184x1387",
+      "form_factor": "wide",
+      "label": "Wonder Widgets",
+      "description": "Compress and compare images with different codecs right in your browser."
+    },
+    {
+      "src": "./assets/img/home_img.png",
+      "type": "image/png",
+      "sizes": "2184x1387",
+      "label": "Screenshot 2",
+      "description": "A description of the second screenshot."
+    }
+  ]
+}

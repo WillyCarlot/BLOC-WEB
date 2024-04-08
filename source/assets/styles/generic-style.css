@@ -1,0 +1,261 @@
+/*-----------------------------------body-----------------------------------*/
+
+body
+{
+    background-color: #f5f2ef;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    color: #2e383d;
+}
+
+.show{
+    display: block !important;
+}
+
+
+
+/*------------------------------------------------------header---------------------------------------*/
+.PC-nav-bar{
+    background-color: white;
+    display: grid;
+    grid-template-rows: 15vh;
+    grid-template-columns: 20vh 0.5fr 1fr 0.5fr 20vh;
+}
+
+/*-----------------------------------------------------logo------------------------------------------*/
+.PC-nav-bar .logo
+{
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+    text-align: center;
+}
+
+.logo img{
+    height: 15vh;
+}
+
+/*-----------------------------------------------------nav------------------------------------------*/
+.PC-nav-bar .center_cont
+{
+
+    grid-row: 1/2;
+    grid-column: 3/4;
+}
+.PC-nav-bar .category-list{
+
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-rows: 15vh;
+    grid-template-columns: repeat(4,1fr);
+}
+.PC-nav-bar .navbar .category-list li{
+    text-align: center;
+    margin-top: 3.5vh;
+    list-style: none; /* Supprime les puces */
+    justify-content: space-evenly;
+}
+
+.PC-nav-bar .navbar .category-list img{
+    height: 7vh;
+}
+
+/*-----------------------------------------------------connexion------------------------------------------*/
+.PC-nav-bar .compte
+{
+    grid-row: 1/2;
+    grid-column: 5/6;
+    margin-top: 16%;
+    margin-bottom: 16%;
+    margin-right: 5%;
+}
+.PC-nav-bar .compte button{
+    display: inline;
+    background-color: #1B75BB;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+}
+.PC-nav-bar .compte button .text{
+    margin-right: 5%;
+    font-size: 150%;
+    color: white;
+}
+.PC-nav-bar .compte button img{
+    height: auto;
+    width: 15px;
+    margin-top: 5px;
+}
+
+.PC-nav-bar .compte button:hover{
+    background-color: #47a8ff;
+}
+
+
+/*------------------------------------------------------for phone------------------------------------------------------*/
+
+.phone-nav-bar{
+    display: none;
+}
+.phone-nav-bar .phoneHead{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 100%;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+
+/*---------------------------------------------------bouton hubuger---------------------------------------------------*/
+.phone-nav-bar .phoneHead .btn_menu{
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    margin: 7px;
+    height: 65px;
+    width: 65px;
+}
+
+.phone-nav-bar .phoneHead .btn_menu button{
+    background: none;
+    padding-top: 10px;
+
+    border: none;
+
+    display: grid;
+    grid-template-columns: 50px;
+    grid-row: repeat(3,10px);
+}
+
+
+.phone-nav-bar .phoneHead .btn_menu button img{
+    margin-left: 3px;
+    height: 11px;
+    border-radius: 10px;
+    width: 45px;
+}
+
+/*-------------------------------------------------bouton conection-------------------------------------------------*/
+
+.phone-nav-bar .phoneHead .btn_conct{
+    width: 150px;
+    padding: 10px;
+    padding-top: 10px;
+    padding-bottom:10px ;
+}
+.phone-nav-bar .phoneHead .btn_conct button{
+    display: inline;
+    background-color: #1B75BB;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+}
+
+.phone-nav-bar .phoneHead .btn_conct button .text{
+    margin-right: 10px;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+}
+.phone-nav-bar .phoneHead .btn_conct button img{
+    height: auto;
+    width: 15px;
+    margin-top: 5px;
+}
+
+.phone-nav-bar .phoneHead .btn_conct button:hover{
+    background-color: #47a8ff;
+}
+
+
+
+
+
+/*-----------------------------------------------------menue deroulant-----------------------------------------------------*/
+.phone-nav-bar .menuClick{
+    position: fixed ;
+    top: 0;
+    left: 0;
+    width: 50%;
+    bottom: 0;
+    background-color:white;
+    width: 50%;
+    min-width: 300px;
+    height: 100%;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.50);
+    border-radius: 10px;
+    margin: 7px;
+    z-index: 98;
+}
+.phone-nav-bar .menuClick .topM{
+    margin: 5%;
+    padding-right: 5%;
+    display: grid;
+    grid-template-columns: repeat(2,10%);
+    grid-template-rows: 100%;
+    justify-content: space-between;
+    align-content: space-between;
+}
+.phone-nav-bar .menuClick .topM .btn_crois{
+    grid-row: 1/2;
+    grid-column: 1/2;
+
+    border-radius: 10px;
+}
+
+.phone-nav-bar .menuClick .topM .btn_home{
+    grid-row: 1/2;
+    grid-column: 2/3;
+}
+
+.phone-nav-bar .menuClick .topM .btn_home button ,.phone-nav-bar .menuClick .topM .btn_crois button{
+
+    border: none;
+    font-size: 3ex;
+    padding: 20px;
+    padding: 0.4ex;
+    border-radius: 10px;
+    background-color: rgb(27, 117, 187,0.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.30);
+}
+
+.phone-nav-bar .menuClick .mainM{
+    margin-top: 5ex;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-gap: 10%;
+}
+.phone-nav-bar .menuClick .mainM input{
+    margin-inline: 5%;
+    background-color: #1B75BB;
+    border:none;
+    border-radius: 15px;
+    height: 7ch;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.30);
+    font-size: 17px;
+}
+
+
+
+
+
+@media (max-width: 950px) {
+    .PC-nav-bar{
+        display: none;
+    }
+    .phone-nav-bar{
+        display: block;
+    }
+    .menuClick{
+        display: none;
+    }
+}
+
+

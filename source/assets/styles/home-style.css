@@ -1,0 +1,138 @@
+
+
+main.desktop {
+    width: 45vw;
+    height: 68vh;
+    background-color: white;
+    border: none;
+    border-radius: 25px;
+    margin: 0 auto;
+    margin-top: 10vh;
+}
+
+main.desktop .grid {
+    
+    display: grid;
+    grid-template-rows: repeat(8, 7vh);
+    grid-template-columns: repeat(4, 8.42vw);
+    grid-gap: 1vh;
+    justify-content: center;
+}
+
+main.desktop .grid .b_1 {
+    grid-row: 7/8;
+    grid-column: 1/3;
+}
+
+main.desktop .grid .b_2 {
+    grid-row: 7/8;
+    grid-column: 3/5;
+}
+
+main.desktop .grid .b_3 {
+    grid-row: 8/9;
+    grid-column: 1/3;
+}
+
+main.desktop .grid .b_4 {
+    grid-row: 8/9;
+    grid-column: 3/5;
+}
+
+main.desktop .grid input{
+    border: none;
+    border-radius: 10px;
+    background-color: #1B75BB;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+main.desktop .grid input:hover {
+    background-color: #025290;
+}
+
+main.desktop .grid img{
+    width: 29vw;
+    grid-row: 1/7;
+    grid-column: 1/5;
+    margin-left: 2.6vw;
+    margin-right: 2.6vw;
+    margin-top: 5vh;
+}
+
+main.mobile{
+    display: none;
+}
+
+main.mobile h1{
+    text-align: center;
+}
+
+main.mobile span{
+    text-align: center;
+}
+ 
+
+@media (max-width:  1350px) {
+    main.desktop .grid .b_1 {
+        grid-row: 6/7;
+        grid-column: 1/5;
+    }
+    
+    main.desktop .grid .b_2 {
+        grid-row: 7/8;
+        grid-column: 3/5;
+    }
+    
+    main.desktop .grid .b_3 {
+        grid-row: 8/9;
+        grid-column: 1/5;
+    }
+    
+    main.desktop .grid .b_4 {
+        grid-row: 7/8;
+        grid-column: 1/3;
+    }
+    @media (max-width:  1000px) {
+        main.desktop .grid .b_1 {
+            grid-row: 5/6;
+            grid-column: 1/5;
+        }
+        
+        main.desktop .grid .b_2 {
+            grid-row: 6/7;
+            grid-column: 1/5;
+        }
+        
+        main.desktop .grid .b_3 {
+            grid-row: 8/9;
+            grid-column: 1/5;
+        }
+        
+        main.desktop .grid .b_4 {
+            grid-row: 7/8;
+            grid-column: 1/5;
+        }
+        main.desktop .grid img{
+            width: 270px;
+        }
+        main.desktop{
+            width: 400px;
+        }
+        main.desktop .grid {
+            grid-template-rows: repeat(8, 7vh);
+            grid-template-columns: repeat(4, 75px);
+        }
+
+        @media (max-width:  950px) {
+            main.desktop{
+                display: none;
+            }
+            main.mobile{
+                display: grid;
+            }
+        }
+    }
+}

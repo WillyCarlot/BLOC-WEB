@@ -1,0 +1,570 @@
+main {
+
+    padding-top : 0.95%;
+    width: 86.4ch;
+    height: 69.4ex;
+    background-color: white;
+    border: none;
+    border-radius: 25px;
+    margin: 0 auto;
+    margin-top: 3%;
+}
+
+main .grid {
+    display: grid;
+    grid-template-rows: 5.38ex 62.71ex;
+    grid-template-columns: 19.2ch 57.6ch ;
+    grid-gap: 1vh;
+    justify-content: center;
+}
+
+
+/*----------------------------------------------------coeur de corp --------------------------------*/
+
+
+/*----------------------------------------------------nav------------------------------------------------*/
+#select_place{
+    background-color: #D9D9D9;
+    border-radius: 10px;
+    grid-row: 1/2;
+    grid-column: 1/2;
+    border: none;
+    margin: 2%;
+    margin-right: 5%;
+    padding-left: 3%;
+    font-size: 100%;
+}
+#cherche_bar{
+    background-color: #D9D9D9;
+    border-radius: 20px;
+    grid-area: 1/2/2/3;
+    border: none;
+    padding-left: 5%;
+}
+
+
+
+
+
+
+.show_entreprise{
+    grid-row: 2/3;
+    grid-column: 1/3;
+    display: grid;
+    grid-gap: 1vh;
+    grid-template-rows: 3.059ex repeat(4, 1fr);
+    grid-template-columns: 1fr;
+}
+
+
+
+
+
+
+
+.show_entreprise .text_info{
+    margin: 0;
+    margin-top : 0.5vh;
+    font-size : 70%;
+    color: #1B75BB;
+    border-bottom: 2px solid black;
+}
+
+
+
+
+.show_entreprise .entreprise{
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25); /* Exemple d'ombre */ 
+    display: grid;
+    grid-template-rows: repeat(4, 4.06ex);
+    grid-template-columns: 2fr 8fr 1fr;
+    border-radius: 12px;
+}
+
+.show_entreprise .entreprise .titre{
+    margin-top: 5%;
+    grid-row: 1/5;
+    grid-column: 1/2;
+    text-align: center;
+    justify-content: center;
+    border-right: 2px solid black;
+    height: 90%;
+}
+.show_entreprise .entreprise .competance{
+    margin: 0;
+    grid-row: 1/4;
+    grid-column: 2/3;
+    padding-top: 5%;
+}
+
+
+.show_entreprise .entreprise .competance p{
+    margin: 0;
+    text-align: center;
+    justify-content: center;
+}
+.show_entreprise .entreprise .salary_ville{
+    margin-left: 5%;
+    grid-row: 4/5;
+    grid-column: 2/3;
+    display: grid;
+    align-items: center;
+    text-align: center;
+    grid-template-columns: 1fr 2fr 1fr;
+    border-top: 2px solid black;
+    width: 90%;
+}
+
+.show_entreprise .entreprise .salary_ville .salaire{
+
+    margin: 0px;
+}
+
+.show_entreprise .entreprise .salary_ville .ville{
+    margin: 0;
+    grid-column: 3/4;
+}
+
+
+.show_entreprise .entreprise .favori{
+    grid-row: 1/3;
+    grid-column: 3/4;
+    text-align: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.show_entreprise .entreprise .N_place{
+    grid-column: 3/4;
+    grid-row: 3/5;
+    display: grid;
+    grid-template-columns: repeat(5,20%);
+    grid-template-rows: repeat(10,10%);
+    
+}
+
+
+.show_entreprise .entreprise .N_place p{
+
+    margin: 0;
+    
+
+}
+.show_entreprise .entreprise .N_place .N{
+    grid-column: 2/5;
+    grid-row: 2/4;
+    text-align: left;
+    text-align: center;
+    justify-content: center;
+
+}
+.show_entreprise .entreprise .N_place .slache{
+    grid-column: 3/6;
+    grid-row: 3/5;
+    text-align: center;
+    font-size: 200%;
+    transform: rotate(45deg);
+}
+.show_entreprise .entreprise .N_place .sur{
+    grid-column: 3/5;
+    grid-row: 6/8;
+    text-align: right;
+    text-align: center;
+    justify-content: center;
+}
+
+
+
+
+.show_entreprise .pagination{
+    grid-row: 5/6;
+    display: grid;
+    grid-template-columns: repeat(3, 5ch);
+    grid-template-rows: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.show_entreprise .pagination .Nleft{
+    grid-column: 1/2;
+}
+.show_entreprise .pagination .Ncurent{
+    grid-column: 2/3;
+}
+.show_entreprise .pagination .Nright{
+    grid-column: 3/4;
+}
+
+
+
+
+/*------------------------------------------les pop up-------------------------------------------*/
+.pop_up_postuler_offre, .pop_up_cree_offre, .pop_up_cv{
+    position: fixed ;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.25);
+    z-index: 98;
+}
+.pop_pu_content{
+    width: 76.8ch;
+    height: 71.36ex;
+    background-color: white;
+    position: absolute;
+    border-radius: 25px;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    padding: 1%;
+    display: grid;
+    grid-template-columns: 28%;
+    grid-template-rows: 1fr 11fr 0.6fr;
+    grid-gap: 2%;
+}
+
+
+.pop_pu_content .head_of_pop_up{
+    grid-row: 1/2;
+    grid-column: 1/3;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-gap: 3%;
+}
+.pop_pu_content .head_of_pop_up .entrepris{
+    grid-row: 1/2;
+    grid-column: 1/2;
+    background-color: #D9D9D9;
+    border-radius: 15px;
+    border: none;
+    padding-left: 4%;
+    margin: 0;
+}
+.pop_pu_content .head_of_pop_up .titre{
+    grid-row: 1/2;
+    grid-column: 2/3;
+    background-color: #D9D9D9;
+    border-radius: 15px;
+    border: none;
+    padding-left: 4%;
+    margin: 0;
+}
+
+
+
+
+
+.pop_pu_content .left_content{
+    grid-row: 2/3;
+    grid-column: 1/2;
+    display: grid;
+    grid-template-rows: 0.2fr auto 1fr;
+    grid-template-columns: 100%;
+}
+
+/*----------------------------------------------------------------ville ----------------------------------------------------------------*/
+.pop_pu_content .left_content .ville .ville_title{
+    margin: 0;
+    margin-left: 12%;
+}
+
+.pop_pu_content .left_content .ville input{
+    width: 94%;
+    height: 4ex;
+    background-color: #D9D9D9;
+    border-radius: 15px;
+    border: none;
+    margin: 1ex;
+    margin-left: 0;
+    padding-left: 4%;
+}
+
+/*----------------------------------------------------------------competence----------------------------------------------------------------*/
+
+.pop_pu_content .competance{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+}
+.pop_pu_content .competance .competance_title{
+    margin: 0;
+    margin-left: 12%;
+}
+.pop_pu_content .competance input{
+    width: 94%;
+    height: 4ex;
+    background-color: #D9D9D9;
+    border-radius: 15px;
+    border: none;
+    margin: 1ex;
+    margin-left: 0;
+    padding-left: 4%;
+}
+.pop_pu_content .competance .plus{
+    text-align: center;
+    margin: 0;
+    padding-top:0.23ex;
+    width: 4ch;
+    height: 3ex;
+    border-radius: 17px;
+    background-color: #94C8F0;
+}
+
+
+/*----------------------------------------------------------------salaires */
+.pop_pu_content .left_content .salary{
+    display: grid;
+    grid-template-columns: 45% 10% 45%;
+    grid-template-rows: 10% 12%;
+    text-align: center;
+    justify-content: center;
+}
+.pop_pu_content .left_content .salary .title_salary{
+    margin: 0;
+    padding-top: 5%;
+    grid-row: 1/2;
+    grid-column: 1/3;
+}
+.pop_pu_content .left_content .salary input{
+    padding-left: 10%;
+    border-radius: 15px;
+    background-color: #D9D9D9;
+    border: none;
+
+}
+.pop_pu_content .left_content .salary .min{
+    grid-row: 2/3;
+    grid-column: 1/2;
+}
+.pop_pu_content .left_content .salary .tiret{
+    grid-row: 2/3;
+    grid-column: 2/3;
+    margin: 0;
+    margin-top: 45%;
+}
+
+.pop_pu_content .left_content .salary .max{
+    grid-row: 2/3;
+    grid-column: 3/4;
+}
+/*----------------description------------------------------------------------*/
+.pop_pu_content .description{
+    grid-row: 2/3;
+    grid-column: 2/3;
+    display: grid;
+}
+
+.pop_pu_content .description textarea{
+    resize: none;
+    border: none;
+}
+
+
+/*----------------buton------------------------------------------------*/
+.pop_pu_content .btn_de_popup{
+    grid-row: 3/4;
+    grid-column: 1/3;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: 100%;
+    grid-gap: 10px;
+}
+.pop_pu_content .btn_de_popup .left_buton{
+    grid-row: 1/2;
+    grid-column: 1/2;
+}
+.pop_pu_content .btn_de_popup button{
+    color: white;
+    background-color: #1B75BB;
+    border: none;
+    border-radius: 7px;
+}
+
+.pop_pu_content .btn_de_popup .right_buton{
+    grid-row: 1/2;
+    grid-column: 6/7;
+}
+
+
+
+
+/*------------------------------------------cree-------------------------------------------*/
+
+.pop_up_cree_offre {
+    display: none;
+}
+.pop_up_cree_offre .pop_pu_content .btn_de_popup .btn_sup{
+    grid-row: 1/2;
+    grid-column: 5/6;
+}
+
+/*------------------------------------------postuler-------------------------------------------*/
+
+.pop_up_postuler_offre{
+    display: none;
+}
+
+
+.pop_up_postuler_offre .pop_pu_content .head_of_pop_up {
+    text-align: center;
+    grid-template-columns: 30%;
+}
+.pop_up_postuler_offre .pop_pu_content .head_of_pop_up p{
+    padding-top: 1.5ex;
+}
+
+.pop_up_postuler_offre .pop_pu_content .left_content .ville .ville_content{
+    width: 94%;
+    height: 4ex;
+    background-color: #D9D9D9;
+    border-radius: 15px;
+    border: none;
+    margin: 1ex;
+    padding-top:1ex ;
+    margin-left: 0;
+    padding-left: 4%;
+}
+
+.pop_up_postuler_offre .pop_pu_content .left_content .competance .competance_content p{
+    width: 94%;
+    height: 4ex;
+    background-color: #D9D9D9;
+    border-radius: 15px;
+    border: none;
+    margin: 1ex;
+    padding-top:1ex ;
+    margin-left: 0;
+    padding-left: 4%;
+}
+
+
+
+.pop_up_postuler_offre .pop_pu_content .left_content .salary .min{
+    margin: 0;
+    padding-top: 2%;
+    border-radius: 15px;
+    background-color: #D9D9D9;
+    border: none;
+    height: 3ex;
+}
+.pop_up_postuler_offre .pop_pu_content .left_content .salary .tiret{
+    margin: 0;
+}
+.pop_up_postuler_offre .pop_pu_content .left_content .salary .max{
+    margin: 0;
+    padding-top: 2%;
+    border-radius: 15px;
+    background-color: #D9D9D9;
+    border: none;
+    height: 3ex;
+}
+
+
+
+
+/* ------------------------------------------------pupop cv ------------------------------------------------*/
+
+.pop_up_postuler_offre .pop_up_cv{
+    display: none;
+}
+
+/*------------------------------------------cv-------------------------------------------*/
+
+
+
+.pop_up_postuler_offre .pop_up_cv .pop_pu_content {
+    width: 57.5ch;
+    height: 40.78ex;
+    left: 70%;
+}
+
+.pop_up_postuler_offre .pop_up_cv .pop_pu_content{
+    grid-template-columns: 28%;
+    grid-template-rows: 1fr 11fr 1fr;
+}
+.pop_up_postuler_offre .pop_up_cv .pop_pu_content .head_of_pop_up{
+    grid-row: 1/2;
+    grid-column: 1/3;
+    height: 100%;
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+.pop_up_postuler_offre .pop_up_cv .pop_pu_content .head_of_pop_up p{
+    margin: 0;
+    padding-block: 2%;
+}
+.pop_up_postuler_offre .pop_up_cv .pop_pu_content .cv_et_motviation{
+    grid-row: 2/3;
+    grid-column: 1/3;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 2.5fr;
+}
+
+.pop_up_postuler_offre .pop_up_cv .pop_pu_content .cv_et_motviation .cv p{
+    margin-left: 5%;
+}
+.pop_up_postuler_offre .pop_up_cv .pop_pu_content .cv_et_motviation .motivation{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 0.5fr 2fr;
+}
+.pop_up_postuler_offre .pop_up_cv .pop_pu_content .cv_et_motviation .motivation p {
+    margin-left: 5%;
+}
+.pop_up_postuler_offre .pop_up_cv .pop_pu_content .cv_et_motviation .motivation textarea {
+    grid-row: 2/3;
+    background-color: #E5E5E5;
+    resize: none;
+    border: none;
+    border-radius: 10px;
+}
+
+/*-------------------------------- responsive -----------------------------------------------*/
+
+
+ 
+
+@media (max-width:  950px)  {
+
+    body{
+        margin:0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+        height: 2000px !important;
+    }
+    main{
+        width: 100% !important;
+        height: 100% !important;
+        margin: 0 !important;
+        border-radius: 0 !important;
+    }
+    main .grid{
+        height: 100% !important;
+        grid-template-rows: 2.5% 100% !important;
+        grid-template-columns: 1fr 2fr !important;
+    }
+    .show_entreprise{
+        grid-template-rows: 3.059ex repeat(12, 150px) !important;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+    .pop_up_postuler_offre, .pop_up_cree_offre, .pop_up_cv{
+        height: 100% !important;
+    }
+    .pop_pu_content{
+        width: 95% !important;
+        height: 95% !important;
+        top: 0 !important;
+        left: 0 !important;
+        transform: none !important;
+        margin: 1.5% !important;
+        padding: 2% !important;
+    }
+    .pop_up_postuler_offre .pop_up_cv .pop_pu_content {
+        left: 0 !important;
+    }
+    .show_entreprise .pagination{
+        grid-row: 13/14;
+    }
+}
